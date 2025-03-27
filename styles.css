@@ -55,10 +55,11 @@ h1{
     margin: auto;
     color: #ffffff;
     background-color: rgb(15, 16, 16);
-    font-size: 40px;
+    font-size: 30px;
     border-radius: 10px;
     width: 100%;
     opacity: 0.8;
+
 }
 .button{
     text-align: center;
