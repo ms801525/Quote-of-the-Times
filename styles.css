@@ -1,5 +1,8 @@
+*{
+    font-family: fantasy;
+}
 body{
-    background-color: #e7e1e1;
+    background-color: #f9f5f5;
     font-family: Arial;
     margin: 0;
     padding: 0;
@@ -8,34 +11,89 @@ body{
     background-size: cover;
     background-blend-mode: normal;
 }
+.center{
+    margin: auto;
+    width: 25%;
+    align-content: center;
+    text-align: center;
+}
 h1{
     text-align: center;
     color: #f9f9f9;
-    margin-top: 50px;
-    font-size: 50px;
+    font-size: 40px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(15, 16, 16);
+
 }
-P{
+.p1{
     text-align: center;
-    color: #f9f9f9;    
+    color: #fffefe;    
     font-size: 20px;
+    border-radius: 10px;
+    opacity: 0.9;
+    padding: 5px;
+    background-color: #060606;
 }
-.quote{
+.p2{
+    text-align: center;
+    color: #fffefe;    
+    font-size: 20px;
+    border-radius: 10px;
+    opacity: 0.9;
+    background-color: #060606;
+    padding : 10px;
+}
+/* .pfooter{
     text-align: center;
     color: #ffffff;
-    font-size: 50px;
+    font-size: 20px;
+    padding-top: 50px;
+} */
+.quote{
+    text-align: center;
+    margin: auto;
+    color: #ffffff;
+    background-color: rgb(15, 16, 16);
+    font-size: 40px;
+    border-radius: 10px;
+    width: 100%;
+    opacity: 0.8;
 }
 .button{
     text-align: center;
     font-size: larger;
-    align-content: center;
+    margin: 20px;
     padding: 10px 20px;
     width: 200px;
     margin-top: 20px;
-    background-color: #898989;
-    color: #060606;
+    background-color: #0a0909;
+    color: #f4f0f0;
+    opacity: 1;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 .button:hover{
     background-color: #060606;
     color: #ffffff;
+    opacity: 0.8;
 }
+.link{
+    text-align: center;
+    color: #4a0101;
+    font-size: 20px;
+    margin-top: 20px;
+}
+/* .footer{
+    margin: auto;
+    text-align: center;
+    position: relative;
+    padding-top: 100px;
+    border-radius: 20px;
+    border-style: none;
+} */
+/* .divfooter{
+    text-align: center;
+    position: relative;
+    width: 100%;
+    opacity: 1;
+} */
