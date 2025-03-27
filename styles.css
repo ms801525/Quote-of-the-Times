@@ -1,6 +1,24 @@
 body{
-    background-color: #ffffff;
-    font-family: Arial, sans-serif;
+    background-color: #e7e1e1;
+    font-family: Arial;
     margin: 0;
     padding: 0;
+    background-image: url(Nature-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    color: #f9f9f9;
+    margin-top: 50px;
+    font-size: 50px;
+}
+P{
+    text-align: center;
+    color: #f9f9f9;    
+    font-size: 20px;
+}
+button{
+    text-align: center;
+    align-content: center;
 }
