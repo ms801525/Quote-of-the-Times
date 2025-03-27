@@ -17,14 +17,19 @@
             <p id="time"></p>
             <script src="myscript.js"></script>
         </div>
-        <h1>
-            Quotes of the times
-        </h1>
-        <p>
-            When you need extra motivation use this site to get a random quote.
-        </p>
+        <div>
+            <h1>
+                Quotes of the times
+            </h1>
+            <p>
+                When you need extra motivation use this site to get a random quote.
+            </p>
+        </div>
         <div align="center">
-            <button id="quoteButton">Get a quote </button>
+            <button class="button" type="button" onclick="displayMessage()">Get a quote </button>
+
+            <p class="quote" id="quote"></p>
+            
         </div>
         <div id="quoteDisplay">
             <!-- Quote will be displayed here -->

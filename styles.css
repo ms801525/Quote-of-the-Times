@@ -6,6 +6,7 @@ body{
     background-image: url(Nature-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-blend-mode: normal;
 }
 h1{
     text-align: center;
@@ -18,7 +19,23 @@ P{
     color: #f9f9f9;    
     font-size: 20px;
 }
-button{
+.quote{
     text-align: center;
+    color: #ffffff;
+    font-size: 50px;
+}
+.button{
+    text-align: center;
+    font-size: larger;
     align-content: center;
+    padding: 10px 20px;
+    width: 200px;
+    margin-top: 20px;
+    background-color: #898989;
+    color: #060606;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.button:hover{
+    background-color: #060606;
+    color: #ffffff;
 }
