@@ -26,13 +26,19 @@ h1{
     background-color: rgb(15, 16, 16);
 
 }
+h5{
+    text-align: center;
+    color: #f9f9f9;
+    font-size: 30px;
+    border-radius: 10px;
+    background-color: rgb(15, 16, 16);
+}
 .p1{
     text-align: center;
     color: #fffefe;    
     font-size: 20px;
     border-radius: 10px;
     opacity: 0.9;
-    padding: 5px;
     background-color: #060606;
 }
 .p2{
