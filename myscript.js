@@ -11,24 +11,6 @@ function updateTime() {
 setInterval(updateTime, 1000);
 updateTime();
 
-// function displayMessage() {
-//     document.getElementById("wayne").innerHTML = "You miss 100% of the shots you didn't take. - Wayne Gretzky";
-// }
-
-
-//Temporary function to display a message on the webpage
-
-// function generateRandomString(length) {
-//     let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-//     let result = '';
-//     for (let i = 0; i < length; i++) {
-//         result += characters.charAt(Math.floor(Math.random() * characters.length));
-//         document.getElementById('random').innerHTML = result;
-//     }
-//     return result;
-// // }
-// document.getElementById('quote-button').addEventListener('click', getRandomQuote);
-
 const button = document.getElementById('quote-button');
 
 let quotes = [
@@ -61,22 +43,7 @@ function cooldown() {
     }, 5000);  // 5000ms = 5 seconds cooldown
 }
 
-// Remove the previous event listener that was calling getRandomQuote directly
-// document.getElementById('quote-button').addEventListener('click', getRandomQuote);  // REMOVE THIS LINE!
-
+// Add the getRandomQuote function to the button click event
 // Add the cooldown function to the button click event
 button.addEventListener('click', cooldown);
 
-// Papa.parse('quotes.csv', {
-//     download: true,
-//     header: true,
-//     dynamicTyping: true,
-//     complete: function(results) {
-//         console.log('CSV Parsing complete:', results);  // Log the entire parsed data
-//         quotes = results.data;
-//         console.log('Parsed quotes array:', quotes);  // Log the quotes array
-//     },
-//     error: function(error) {
-//         console.error('Error parsing CSV:', error); // Log any parsing error
-//     }
-// });
