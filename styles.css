@@ -6,7 +6,7 @@ body{
     font-family: Arial;
     margin: 0;
     padding: 0;
-    background-image: url(Nature-image.jpg);
+    background-image: url(desktop.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: normal;
@@ -39,7 +39,9 @@ body{
     margin: auto;
     border-radius: 10px;
     color: #fffefe;  
-    opacity: 0.9;
+    opacity: 0.8;
+    padding: 20px;
+    background-color: #060606;
 }
     
 h3{
