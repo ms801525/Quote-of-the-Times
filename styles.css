@@ -40,14 +40,13 @@ body{
 }
 .outdiv{
     text-align: center;
-    width: 50%;
-    height: 100px;
     margin: auto;
+    color: #ffffff;
+    background-color: rgb(15, 16, 16);
+    font-size: 30px;
     border-radius: 10px;
-    color: #fffefe;  
+    width: 100%;
     opacity: 0.9;
-    padding: 20px;
-    background-color: #060606;
 }
     
 h3{
@@ -98,7 +97,7 @@ h5{
     font-size: 30px;
     border-radius: 10px;
     width: 100%;
-    opacity: 0.8;
+    opacity: 0.9;
 
 }
 .button{
