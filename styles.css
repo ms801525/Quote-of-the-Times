@@ -1,5 +1,6 @@
 *{
     font-family: fantasy;
+    background-color: transparent;
     
 }
 body{
@@ -164,3 +165,15 @@ h5{
         font-size: 15px;
     }
  }
+@media (orientation: landscape) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+}
+@media (orientation: portrait) {
+    body {
+        background-size: cover;
+        background-position: center;
+    }
+}
