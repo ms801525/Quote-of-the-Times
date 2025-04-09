@@ -10,7 +10,22 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: normal;
+    animation-duration: 2s;
+    animation-name: slide-in;
 }
+    @keyframes slide-in {
+        from {
+          translate: -100% 0;
+          opacity: 0;
+          scale: 0.5 1;
+        }
+        to {
+          translate: 0 0;
+          opacity: 1;
+            scale: 1 1;
+        }
+    }
+
 .center{
     margin: auto;
     width: 25%;
@@ -22,11 +37,11 @@ body{
     width: 50%;
     height: 100px;
     margin: auto;
-    padding: 20px;
     border-radius: 10px;
-    background-color: #ffffff;
+    color: #fffefe;  
     opacity: 0.9;
 }
+    
 h3{
     text-align: center;
     color: #f9f9f9;

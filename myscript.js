@@ -74,3 +74,10 @@ function cooldown() {
 // Add the cooldown function to the button click event
 button.addEventListener('click', cooldown);
 
+try{
+    alert("Welcome to my website!" + "\n\n" + "A website of quotes from famous individuals, every 5 seconds will get you a new quote....");
+}
+catch (error) {
+    document.getElementById('Error displaying welcome message:', error);
+}
+
