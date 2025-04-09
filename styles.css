@@ -1,5 +1,6 @@
 *{
     font-family: fantasy;
+    
 }
 body{
     background-color: #f9f5f5;
@@ -26,6 +27,9 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: normal;
+    background-position: center;
+    background-attachment: fixed;
+
 }
 .center{
     margin: auto;
@@ -153,6 +157,7 @@ h5{
     }
     .body{
         width: 100%;
+        height: auto;
     }
     
  }
