@@ -137,16 +137,6 @@ h5{
     width: 100%;
     opacity: 1;
 } */
- @media screen and (max-width: 600px) {
-    body{
-        background-image: url(Nature-image.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-blend-mode: normal;
-        background-position: center;
-        background-attachment: fixed;
-    }
-}
 @media (max-width: 1024px) and (orientation: landscape) {
     body {
         background-size: cover;
