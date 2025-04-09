@@ -137,7 +137,15 @@ h5{
     width: 100%;
     opacity: 1;
 } */
- @media screen and (max-width: 500px) {
+ @media screen and (max-width: 600px) {
+    body{
+        background-image: url(Nature-image.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-blend-mode: normal;
+        background-position: center;
+        background-attachment: fixed;
+    }
     .center{
         width: 100%;
     }
@@ -155,9 +163,4 @@ h5{
     .link{
         font-size: 15px;
     }
-    .body{
-        width: 100%;
-        height: auto;
-    }
-    
  }
