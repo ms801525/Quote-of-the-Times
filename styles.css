@@ -6,10 +6,6 @@ body{
     font-family: Arial;
     margin: 0;
     padding: 0;
-    background-image: url(Nature-image.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: normal;
     animation-duration: 2s;
     animation-name: slide-in;
 }
@@ -25,7 +21,12 @@ body{
             scale: 1 1;
         }
     }
-
+.body{
+    background-image: url(Nature-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: normal;
+}
 .center{
     margin: auto;
     width: 25%;
@@ -150,7 +151,7 @@ h5{
     .link{
         font-size: 15px;
     }
-    body{
+    .body{
         width: 100%;
     }
     
