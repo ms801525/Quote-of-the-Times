@@ -21,7 +21,7 @@ HTML: Structure of the webpage
 
 CSS: Styling and layout
 
-JavaScript: Handling user interaction and fetching quotes from the database
+JavaScript: Handling user interaction and fetching quotes from the JSON file
 
 Installation and Setup
 
@@ -30,7 +30,7 @@ Installation and Setup
 
 The user clicks a button to request a quote.
 
-JavaScript fetches a random quote from the database.
+JavaScript fetches a random quote from the JSON file added to directory 
 
 The quote is displayed dynamically on the webpage.
 
