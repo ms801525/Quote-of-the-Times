@@ -165,7 +165,7 @@ h5{
         font-size: 15px;
     }
  }
-@media (orientation: landscape) {
+@media (max-width: 1024px) and (orientation: landscape) {
     body {
         background-size: cover;
         background-position: center;
