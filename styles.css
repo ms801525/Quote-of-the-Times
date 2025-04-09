@@ -146,14 +146,8 @@ h5{
         background-position: center;
         background-attachment: fixed;
     }
- }
-@media (max-width: 1024px) and (orientation: landscape) {
-    body {
-        background-size: cover;
-        background-position: center;
-    }
 }
-@media (orientation: portrait) {
+@media (max-width: 1024px) and (orientation: landscape) {
     body {
         background-size: cover;
         background-position: center;
