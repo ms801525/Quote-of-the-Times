@@ -132,7 +132,7 @@ h5{
     width: 100%;
     opacity: 1;
 } */
- @media screen and (max-width: 600px) {
+ @media screen and (max-width: 500px) {
     .center{
         width: 100%;
     }
@@ -149,6 +149,9 @@ h5{
     }
     .link{
         font-size: 15px;
+    }
+    body{
+        width: 100%;
     }
     
  }
