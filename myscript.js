@@ -84,7 +84,11 @@ catch (error) {
 function copyText(){
     const text = document.getElementById('quote').innerText;
     navigator.clipboard.writeText(text).then(() => {
-        alert("Quote copied to clipboard!");
+        var tooltip = document.getElementById('tooltip');
+        tooltip.innerHTML = "Copied!";
+        setTimeout(function() {
+            tooltip.innerHTML = "Copy to clipboard";
+        }, 5000);
     }).catch(err => {
         alert("Error copying text");
     });
@@ -92,3 +96,8 @@ function copyText(){
 // Add the copyText function to the button click event
 const copyButton = document.getElementById('copy-button');
 copyButton.addEventListener('click', copyText);
+
+function outFunction(){
+    const tooltip = document.getElementById("tooltip");
+    tooltip.innerHTML = "Copy to clipboard";
+}

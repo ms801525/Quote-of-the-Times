@@ -31,7 +31,7 @@
         </div>
         <div class="center">
         <button class="button" id="quote-button">Click here for a Quote</button>
-        <button onclick="copyText()" id="copy-button" class="button">Copy Quote</button>
+        <button onclick="copyText()" onmouseout="outFunction()" id="copy-button" class="button"><span id="tooltip">Copy to Clipboard</span></button>
         </div>
         <div class="outdiv" id="quote"></div>
         <script src="myscript.js" type="module"></script>
