@@ -81,3 +81,14 @@ catch (error) {
     document.getElementById('Error displaying welcome message:', error);
 }
 
+function copyText(){
+    const text = document.getElementById('quote').innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        alert("Quote copied to clipboard!");
+    }).catch(err => {
+        alert("Error copying text");
+    });
+}
+// Add the copyText function to the button click event
+const copyButton = document.getElementById('copy-button');
+copyButton.addEventListener('click', copyText);
