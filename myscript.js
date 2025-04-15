@@ -61,7 +61,9 @@ function cooldown() {
     button.disabled = true;  // Disable the button immediately
     button.textContent = 'Please wait...';  // Change the button text to inform the user
 
-    getRandomQuote();  // Display the random quote
+    getRandomQuote();// Display the random quote
+
+    copyButton.style.display = 'inline-block'; // Show the copy button
 
     // Set a timeout of 5 seconds to re-enable the button
     setTimeout(() => {
@@ -101,3 +103,4 @@ function outFunction(){
     const tooltip = document.getElementById("tooltip");
     tooltip.innerHTML = "Copy to clipboard";
 }
+
