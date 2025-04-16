@@ -57,45 +57,63 @@ function getRandomQuote() {
 
 }
 
-function cooldown() {
-    button.disabled = true;  // Disable the button immediately
-    button.textContent = 'Please wait...';  // Change the button text to inform the user
+// function cooldown() {
+//     button.disabled = true;  // Disable the button immediately
+//     button.textContent = 'Please wait...';  // Change the button text to inform the user
 
-    getRandomQuote();// Display the random quote
+//     getRandomQuote();// Display the random quote
 
-    copyButton.style.display = 'inline-block'; // Show the copy button
+//     copyButton.style.display = 'inline-block'; // Show the copy button
 
-    // Set a timeout of 5 seconds to re-enable the button
-    setTimeout(() => {
-        button.disabled = false;  // Re-enable the button after the cooldown period
-        button.textContent = 'Get a Random Quote';  // Reset button text
-    }, 5000);  // 5000ms = 5 seconds cooldown
-}
+//     // Set a timeout of 5 seconds to re-enable the button
+//     setTimeout(() => {
+//         button.disabled = false;  // Re-enable the button after the cooldown period
+//         button.textContent = 'Get a Random Quote';  // Reset button text
+//     }, 5000);  // 5000ms = 5 seconds cooldown
+// }
 
-// Add the getRandomQuote function to the button click event
-// Add the cooldown function to the button click event
-button.addEventListener('click', cooldown);
+// // Add the getRandomQuote function to the button click event
+// // Add the cooldown function to the button click event
+// button.addEventListener('click', cooldown);
 
-try{
-    alert("Welcome to my website!" + "\n\n" + "A website of quotes from famous individuals, every 5 seconds will get you a new quote....");
-}
-catch (error) {
-    document.getElementById('Error displaying welcome message:', error);
-}
+// try{
+//     alert("Welcome to my website!" + "\n\n" + "A website of quotes from famous individuals, every 5 seconds will get you a new quote....");
+// }
+// catch (error) {
+//     document.getElementById('Error displaying welcome message:', error);
+// }
+
 
 function copyText(){
     const text = document.getElementById('quote').innerText;
-    navigator.clipboard.writeText(text).then(() => {
-        var tooltip = document.getElementById('tooltip');
-        tooltip.innerHTML = "Copied!";
-        setTimeout(function() {
-            tooltip.innerHTML = "Copy to clipboard";
-        }, 5000);
-    }).catch(err => {
-        alert("Error copying text");
-    });
+    const tooltip = document.getElementById('tooltip');
+
+    // Check if clipboard API is available and in secure context (HTTPS)
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+            tooltip.innerHTML = "Copied!";
+            setTimeout(() => tooltip.innerHTML = "Copy to clipboard", 5000);
+        }).catch(err => {
+            alert("Error copying text: " + err);
+        });
+    } else {
+        // Fallback for HTTP (like your S3 site)
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            document.execCommand('copy');
+            tooltip.innerHTML = "Copied!";
+            setTimeout(() => tooltip.innerHTML = "Copy to clipboard", 5000);
+        } catch (err) {
+            alert("Fallback copy failed: " + err);
+        }
+        document.body.removeChild(textarea);
+    }
 }
-// Add the copyText function to the button click event
+
+// Add event listener to the button
 const copyButton = document.getElementById('copy-button');
 copyButton.addEventListener('click', copyText);
 
