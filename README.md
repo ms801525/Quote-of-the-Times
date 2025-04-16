@@ -1,7 +1,7 @@
 # Quote-of-the-Times
 Overview
 
-# This is a simple webpage that displays a famous quote upon request. The webpage is built using HTML, CSS, and JavaScript and fetches quotes from a database.
+# This is a simple webpage that displays a famous quote upon request. The webpage is built using HTML, CSS, and JavaScript and fetches quotes from a JSON file 
 
 # Features
 
@@ -39,7 +39,7 @@ The quote is displayed dynamically on the webpage.
 quote-display-webpage/
 │── index.html       # Main HTML file
 │── styles.css       # CSS for styling
-│── myscript.js        # JavaScript for functionality
+│── myscript.js      # JavaScript for functionality
 │── quotes.json      # Sample database of quotes (or connected backend API)
 
 # Future Enhancements
