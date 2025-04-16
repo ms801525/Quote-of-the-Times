@@ -57,31 +57,31 @@ function getRandomQuote() {
 
 }
 
-// function cooldown() {
-//     button.disabled = true;  // Disable the button immediately
-//     button.textContent = 'Please wait...';  // Change the button text to inform the user
+function cooldown() {
+    button.disabled = true;  // Disable the button immediately
+    button.textContent = 'Please wait...';  // Change the button text to inform the user
 
-//     getRandomQuote();// Display the random quote
+    getRandomQuote();// Display the random quote
 
-//     copyButton.style.display = 'inline-block'; // Show the copy button
+    copyButton.style.display = 'inline-block'; // Show the copy button
 
-//     // Set a timeout of 5 seconds to re-enable the button
-//     setTimeout(() => {
-//         button.disabled = false;  // Re-enable the button after the cooldown period
-//         button.textContent = 'Get a Random Quote';  // Reset button text
-//     }, 5000);  // 5000ms = 5 seconds cooldown
-// }
+    // Set a timeout of 5 seconds to re-enable the button
+    setTimeout(() => {
+        button.disabled = false;  // Re-enable the button after the cooldown period
+        button.textContent = 'Get a Random Quote';  // Reset button text
+    }, 5000);  // 5000ms = 5 seconds cooldown
+}
 
-// // Add the getRandomQuote function to the button click event
-// // Add the cooldown function to the button click event
-// button.addEventListener('click', cooldown);
+// Add the getRandomQuote function to the button click event
+// Add the cooldown function to the button click event
+button.addEventListener('click', cooldown);
 
-// try{
-//     alert("Welcome to my website!" + "\n\n" + "A website of quotes from famous individuals, every 5 seconds will get you a new quote....");
-// }
-// catch (error) {
-//     document.getElementById('Error displaying welcome message:', error);
-// }
+try{
+    alert("Welcome to my website!" + "\n\n" + "A website of quotes from famous individuals, every 5 seconds will get you a new quote....");
+}
+catch (error) {
+    document.getElementById('Error displaying welcome message:', error);
+}
 
 
 function copyText(){
