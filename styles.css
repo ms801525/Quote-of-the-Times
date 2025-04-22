@@ -174,8 +174,49 @@ h5{
     text-decoration: none;
     color: #f4f0f0;
     border-radius: 10px;
+    opacity: 0.9;
 }
 .navbar:hover{
     background-color: #ddd;
     color: black;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #060606;
+    color: white;
+    text-align: center;
+    opacity: 0.9;
+}
+.nav-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+}
+.fa {
+    padding: 15px;
+    font-size: 30px;
+    width: 20%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+.fa-github {
+    background: #333;
+    color: white;
+}
+.fa-instagram {
+    background: #e1306c;
+    color: white;
 }
