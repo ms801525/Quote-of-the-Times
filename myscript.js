@@ -1,4 +1,25 @@
+console.log("✅ JS loaded!");
 
+    document.addEventListener("DOMContentLoaded", function () {
+      console.log("✅ DOM ready!");
+
+      const acc = document.getElementsByClassName("accordion");
+      console.log("Found", acc.length, "accordion(s)");
+
+      for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          console.log("Accordion clicked");
+
+          this.classList.toggle("active");
+          const panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    });
 // Purpose: To display the current date and time on the webpage
 function updateTime() {
     const date = new Date();
@@ -121,4 +142,3 @@ function outFunction(){
     const tooltip = document.getElementById("tooltip");
     tooltip.innerHTML = "Copy to clipboard";
 }
-

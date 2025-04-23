@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Accordion Ultra Test</title>
+  <style>
+    .accordion {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+    }
+
+    .active, .accordion:hover {
+      background-color: #ccc;
+    }
+
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="accordion">Test Accordion</button>
+  <div class="panel">
+    <p>This is some hidden panel content</p>
+  </div>
+
+  <script>
+    console.log("✅ JS loaded!");
+
+    document.addEventListener("DOMContentLoaded", function () {
+      console.log("✅ DOM ready!");
+
+      const acc = document.getElementsByClassName("accordion");
+      console.log("Found", acc.length, "accordion(s)");
+
+      for (let i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          console.log("Accordion clicked");
+
+          this.classList.toggle("active");
+          const panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
