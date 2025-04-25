@@ -98,7 +98,7 @@ function cooldown() {
 button.addEventListener('click', cooldown);
 
 try{
-    alert("Welcome to my website!" + "\n\n" + "A website of quotes from famous individuals, every 5 seconds will get you a new quote....");
+    console.log("Welcome to the Quote Generator!");
 }
 catch (error) {
     document.getElementById('Error displaying welcome message:', error);
