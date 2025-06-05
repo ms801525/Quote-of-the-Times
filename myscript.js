@@ -55,8 +55,7 @@ fetch('quotes.json')
         console.error('There was a problem with the fetch operation:', error);
         console.log('Error fetching quotes:', error);
     });
-
-
+    
 function getRandomQuote() {
     if(quotes.length === 0){
         console.log("Quote is Loading");
