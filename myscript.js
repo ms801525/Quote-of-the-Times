@@ -53,7 +53,6 @@ function getRandomQuote() {
 setInterval(window.onload = getRandomQuote, 10000); // Hide the copy button initially
 getRandomQuote(); // Initial call to display a quote on page load
 
-
 function copyText(){
     const text = document.getElementById('quote').innerText;
     const tooltip = document.getElementById('tooltip');
