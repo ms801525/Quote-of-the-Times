@@ -84,7 +84,7 @@ function copyText(){
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(() => {
             tooltip.innerHTML = "Copied!";
-            setTimeout(() => tooltip.innerHTML = "Copy to clipboard", 5000);
+            setTimeout(() => tooltip.innerHTML = "Copy to clipboard", 2000);
         }).catch(err => {
             alert("Error copying text: " + err);
         });
