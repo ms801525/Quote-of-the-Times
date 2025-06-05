@@ -49,8 +49,8 @@ function getRandomQuote() {
     // Call copyText to update the tooltip with the new quote
     console.log(randomQuote);
 }
-
-setInterval(window.onload = getRandomQuote, 10000); // Hide the copy button initially
+setTimeout(getRandomQuote, 1000); // Initial call to display a quote after 1 second
+setInterval(getRandomQuote, 10000); // Hide the copy button initially
 getRandomQuote(); // Initial call to display a quote on page load
 
 function copyText(){
