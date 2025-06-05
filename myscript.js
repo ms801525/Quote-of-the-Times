@@ -34,7 +34,6 @@ setInterval(updateTime, 1000);
 updateTime();
 
 const button = document.getElementById('quote-button');
-
 // Fetch quotes from the JSON file
 //quotes JSON file was taken from https://gist.github.com/JakubPetriska/060958fd744ca34f099e947cd080b540
 let quotes = [];
