@@ -149,7 +149,6 @@ h5{
     color: #ffffff;
     opacity: 0.9;
 }
-
 .button1{
     text-align: center;
     max-width: 50%;
@@ -161,7 +160,6 @@ h5{
     color: #f4f0f0;
     opacity: 1;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    display: none;
 }
 .button1:hover{
     background-color: #060606;

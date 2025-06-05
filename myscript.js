@@ -1,25 +1,25 @@
 console.log("✅ JS loaded!");
 
-    document.addEventListener("DOMContentLoaded", function () {
-      console.log("✅ DOM ready!");
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   console.log("✅ DOM ready!");
 
-      const acc = document.getElementsByClassName("accordion");
-      console.log("Found", acc.length, "accordion(s)");
+    //   const acc = document.getElementsByClassName("accordion");
+    //   console.log("Found", acc.length, "accordion(s)");
 
-      for (let i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          console.log("Accordion clicked");
+    //   for (let i = 0; i < acc.length; i++) {
+    //     acc[i].addEventListener("click", function () {
+    //       console.log("Accordion clicked");
 
-          this.classList.toggle("active");
-          const panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-      }
-    });
+    //       this.classList.toggle("active");
+    //       const panel = this.nextElementSibling;
+    //       if (panel.style.display === "block") {
+    //         panel.style.display = "none";
+    //       } else {
+    //         panel.style.display = "block";
+    //       }
+    //     });
+    //   }
+    // });
 // Purpose: To display the current date and time on the webpage
 function updateTime() {
     const date = new Date();
@@ -34,12 +34,6 @@ setInterval(updateTime, 1000);
 updateTime();
 
 const button = document.getElementById('quote-button');
-
-// let quotes = [
-//     { author: "John Lennon", quote: "Life is what happens when you're busy making other plans." },
-//     { author: "William Shakespeare", quote: "To be, or not to be, that is the question." },
-//     { author: "Franklin D. Roosevelt", quote: "The only limit to our realization of tomorrow is our doubts of today." }
-// ];
 
 // Fetch quotes from the JSON file
 //quotes JSON file was taken from https://gist.github.com/JakubPetriska/060958fd744ca34f099e947cd080b540
@@ -65,7 +59,7 @@ fetch('quotes.json')
 
 function getRandomQuote() {
     if(quotes.length === 0){
-        alert("Quote is Loading");
+        console.log("Quote is Loading");
         return;
     }
     const randomIndex = Math.floor(Math.random() * quotes.length);
@@ -74,35 +68,12 @@ function getRandomQuote() {
 
     const elem = document.getElementById('quote');
     elem.innerHTML = randomQuote.Quote + '<br><br> - ' + randomQuote.Author;
+    // Call copyText to update the tooltip with the new quote
     console.log(randomQuote);
-
 }
 
-function cooldown() {
-    button.disabled = true;  // Disable the button immediately
-    button.textContent = 'Please wait...';  // Change the button text to inform the user
-
-    getRandomQuote();// Display the random quote
-
-    copyButton.style.display = 'inline-block'; // Show the copy button
-
-    // Set a timeout of 5 seconds to re-enable the button
-    setTimeout(() => {
-        button.disabled = false;  // Re-enable the button after the cooldown period
-        button.textContent = 'Get a Random Quote';  // Reset button text
-    }, 5000);  // 5000ms = 5 seconds cooldown
-}
-
-// Add the getRandomQuote function to the button click event
-// Add the cooldown function to the button click event
-button.addEventListener('click', cooldown);
-
-try{
-    console.log("Welcome to the Quote Generator!");
-}
-catch (error) {
-    document.getElementById('Error displaying welcome message:', error);
-}
+setInterval(window.onload = getRandomQuote, 10000); // Hide the copy button initially
+getRandomQuote(); // Initial call to display a quote on page load
 
 
 function copyText(){
@@ -126,7 +97,7 @@ function copyText(){
         try {
             document.execCommand('copy');
             tooltip.innerHTML = "Copied!";
-            setTimeout(() => tooltip.innerHTML = "Copy to clipboard", 5000);
+            setTimeout(() => tooltip.innerHTML = "Copy to clipboard", 2000);
         } catch (err) {
             alert("Fallback copy failed: " + err);
         }
