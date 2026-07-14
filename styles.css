@@ -6,19 +6,22 @@
 }
 body{
     margin: 0;
-    padding: 0;
-    width: 100%;
     min-height: 100%;
 }
 body{
 
-    min-width: 100vh;
+    min-height: 100vh;
     min-height: 100dvh;
     background-image: url("wild-nature-7680x4320.jpg");
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
 
+}
+main{
+    flex:1;
 }
 
 .loader {
@@ -296,14 +299,10 @@ h5{
     overflow: hidden;
 }
 footer {
-    border-style: solid;
-    border-color: black;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
     width: 100%;
+    padding: 15px;
+    text-align: center;
     color: white;
-    left: 0;
-    bottom: 0;
     background-color: black;
+    box-sizing: border-box;
 }
