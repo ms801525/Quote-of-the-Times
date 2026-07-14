@@ -1,7 +1,8 @@
-# Quote-of-the-Times
+# Quote-of-the-Times V2
+
 Overview
 
-# This is a simple webpage that displays a famous quote upon request. The webpage is built using HTML, CSS, and JavaScript and fetches quotes from a JSON file 
+# This is a simple webpage that displays a famous quote upon request. The webpage is built using HTML, CSS, and JavaScript and fetches quotes from a JSON file
 
 # Features
 
@@ -25,22 +26,21 @@ JavaScript: Handling user interaction and fetching quotes from the JSON file
 
 Installation and Setup
 
-
 # How It Works
 
 The user clicks a button to request a quote.
 
-JavaScript fetches a random quote from the JSON file added to directory 
+JavaScript fetches a random quote from the JSON file added to directory
 
 The quote is displayed dynamically on the webpage.
 
 # File Structure
 
 quote-display-webpage/
-│── index.html       # Main HTML file
-│── styles.css       # CSS for styling
-│── myscript.js      # JavaScript for functionality
-│── quotes.json      # Sample database of quotes (or connected backend API)
+│── index.html # Main HTML file
+│── styles.css # CSS for styling
+│── myscript.js # JavaScript for functionality
+│── quotes.json # Sample database of quotes (or connected backend API)
 
 # Future Enhancements
 
