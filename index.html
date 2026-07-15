@@ -18,7 +18,8 @@
         <div class="background-image">
 
         <div class="div-loader">
-            <div class="loader"></div>
+            <div class="loader">
+            </div>
         </div>
 
         <!-- Nav bar -->
@@ -29,6 +30,7 @@
         </div> -->
         <p id="error"></p>
         <div class="center">
+            <button class="toggle" id="view-toggle">* Click for Alternate View *</button>
             <p class="p2" id="time"></p>
         </div>
         <div class="center">
@@ -36,15 +38,16 @@
                 Quotes of the times
             </h3>
             <p class="p2">
-                When you need extra motivation. A new quote shows every 5 minutes.
+                Daily Inspiration
                 <br>
+                Discover thousands of motivational, philosophical and famous quotes. Please use the view that is most comfortable for you 🙂
                 <br>
-                Created by Mustafa Ali
             </p>
         </div>
         <div class="center">
-        <button class="button1"><a href="search.html"> Search for Author</a></button>
-        <button onclick="copyText()" onmouseout="outFunction()" id="copy-button" class="button1"><span id="tooltip">Copy to Clipboard</span></button>
+        <button class="button1"><a href="search.html"> Search for Author --> </a></button>
+        <button onclick="copyText()" onmouseout="outFunction()" id="copy-button" class="button1"><span id="tooltip">📋 Copy
+        </span></button>
         </div>
         <div onload="getRandomeQuote()"  class="outdiv" id="quote"></div>
         <div class="socials">
@@ -55,5 +58,9 @@
           
         <script src="myscript.js" type="module"></script>
         </div>
+        <footer class="footer">
+            <p>Created by Mustafa Ali</p>
+            <p>VERSION 1.2</p>
+        </footer>
     </body>
 </html>

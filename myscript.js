@@ -62,7 +62,7 @@ function copyText(){
     // Check if clipboard API is available and in secure context (HTTPS)
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(() => {
-            tooltip.innerHTML = "Copied!";
+            tooltip.innerHTML = "✅ Copied";
             setTimeout(() => tooltip.innerHTML = "Copy to clipboard", 2000);
         }).catch(err => {
             alert("Error copying text: " + err);
@@ -97,3 +97,10 @@ function quotes_Search() {
 
 
 }
+const button_view = document.getElementById("view-toggle");
+const background = document.querySelector(".background-image");
+
+button_view.addEventListener("click", function() {
+    background.classList.toggle("background-image2");
+
+});
