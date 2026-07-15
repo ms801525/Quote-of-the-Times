@@ -1,22 +1,22 @@
 *{
-    font-family: fantasy;
-    background-color: transparent;
+    font-family: monospace;
     
 }
-body{
-    background-color: #f9f5f5;
-    font-family: Arial;
+html,
+body {
     margin: 0;
     padding: 0;
+    min-height: 100%;
+    background-color: black;
 }
-.body{
-    background-image: url(wild-nature-7680x4320.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-blend-mode: normal;
-    background-position: center;
-    background-attachment: fixed;
 
+.background-image {
+    background-image: url("wild-nature-7680x4320.jpg");
+    min-height: 100dvh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .loader {
     width: 120px;
@@ -209,11 +209,13 @@ h5{
     width: 100%;
     opacity: 1;
 } */
-@media (max-width: 1024px) and (orientation: landscape) {
-    body {
+@media (max-width: 1024px) {
+    .background-image {
+        min-height: 100dvh;
+        width: 100%;
         background-size: cover;
         background-position: center;
-        width: 100%;
+        background-repeat: no-repeat;
     }
 }
 .navbar{
