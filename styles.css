@@ -72,7 +72,7 @@ body {
     color: #ffffff;
     background-color: rgb(15, 16, 16);
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 50%;
     opacity: 0.9;
     padding: 10px;
@@ -83,7 +83,7 @@ h3{
     color: #f9f9f9;
     font-size: 20px;
     padding: 5px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: rgb(15, 16, 16);
 
 }
@@ -91,7 +91,7 @@ h5{
     text-align: center;
     color: #f9f9f9;
     font-size: 30px;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: rgb(15, 16, 16);
 }
 .p1{
@@ -99,7 +99,7 @@ h5{
     text-align: center;
     color: #fffefe;    
     font-size: 15px;
-    border-radius: 15px;
+    border-radius: 20px;
     opacity: 0.9;
     background-color: #060606;
 }
@@ -107,7 +107,7 @@ h5{
     text-align: center;
     color: #fffefe;    
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 20px;
     opacity: 0.9;
     background-color: #060606;
     padding : 5px;
@@ -116,7 +116,7 @@ h5{
     text-align: center;
     color: #fffefe;    
     font-size: 25px;
-    border-radius: 10px;
+    border-radius: 20px;
     opacity: 0.9;
     background-color: #060606;
     padding : 1px;
@@ -126,7 +126,7 @@ h5{
     text-align: center;
     color: #fffefe;     
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 20px;
     opacity: 1;
     background-color: #060606;
     padding : 5px;
@@ -135,7 +135,7 @@ h5{
 .img{
     
     float: left;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 /* .pfooter{
     text-align: center;
@@ -149,27 +149,10 @@ h5{
     color: #ffffff;
     background-color: rgb(15, 16, 16);
     font-size: 30px;
-    border-radius: 10px;
+    border-radius: 20px;
     width: 100%;
     opacity: 0.9;
 
-}
-.button{
-    text-align: center;
-    max-width: 50%;
-    font-size: 15px;
-    margin: 20px;
-    padding: 10px 5px;
-    margin-top: 20px;
-    background-color: #0a0909;
-    color: #f4f0f0;
-    opacity: 1;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-.button:hover{
-    background-color: #060606;
-    color: #ffffff;
-    opacity: 0.9;
 }
 .button1{
     text-align: center;
@@ -182,6 +165,7 @@ h5{
     color: #f4f0f0;
     opacity: 1;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 20px;
 }
 .button1:hover{
     background-color: #060606;
