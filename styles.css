@@ -8,28 +8,50 @@ body{
     font-family: Arial;
     margin: 0;
     padding: 0;
-    animation-duration: 2s;
-    animation-name: slide-in;
 }
-    @keyframes slide-in {
-        from {
-          translate: -100% 0;
-          opacity: 0;
-          scale: 0.5 1;
-        }
-        to {
-          translate: 0 0;
-          opacity: 1;
-            scale: 1 1;
-        }
-    }
 .body{
-    background-image: url(Nature-image.jpg);
+    background-image: url(wild-nature-7680x4320.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-blend-mode: normal;
     background-position: center;
     background-attachment: fixed;
+
+}
+.loader {
+    width: 120px;
+    height: 120px;
+    border: 8px solid black;
+    border-top-color: grey;
+    position: relative;
+    border-radius: 50%;
+    animation: spin 1s linear infinite, slide 2.0s forwards;
+}
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+@keyframes slide {
+
+    from {
+        opacity: 1;
+        transform: rotate(0deg);
+        pointer-events: auto;
+    }
+    to{
+        opacity: 0;
+        transform: rotate(360deg);
+        pointer-events: none;
+    }
+}
+
+.div-loader{
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* this puts it ahead of everything else in terms of layout layers*/
+    pointer-events: none; /* lets you click pass the loader since it is the most front layer*/
 
 }
 .center{
