@@ -17,7 +17,6 @@ const button = document.getElementById('quote-button');
 // Fetch quotes from the JSON file
 //quotes JSON file was taken from https://gist.github.com/JakubPetriska/060958fd744ca34f099e947cd080b540
 let quotes = [];
-let quotes_search = [];
 console.log('Fetching quotes from JSON file...');
 fetch('quotes.json')
     .then(response => {
@@ -29,7 +28,6 @@ fetch('quotes.json')
     })
     .then(data => {
         quotes = data;
-        quotes_search = data;
         console.log('Quotes loaded:', quotes);
     })
     .catch(error => {
@@ -93,10 +91,6 @@ function outFunction(){
     tooltip.innerHTML = "Copy to clipboard";
 }
 
-function quotes_Search() {
-
-
-}
 const button_view = document.getElementById("view-toggle");
 const background = document.querySelector(".background-image");
 
