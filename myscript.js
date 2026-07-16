@@ -17,6 +17,8 @@ const button = document.getElementById('quote-button');
 // Fetch quotes from the JSON file
 //quotes JSON file was taken from https://gist.github.com/JakubPetriska/060958fd744ca34f099e947cd080b540
 let quotes = [];
+let quotes_like = [];
+let currentQuote = null; //create a current quote
 console.log('Fetching quotes from JSON file...');
 fetch('quotes.json')
     .then(response => {
@@ -42,6 +44,7 @@ function getRandomQuote() {
     }
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const randomQuote = quotes[randomIndex];
+    currentQuote = randomQuote; //whatever the random quote is, equal it to the current quote so we can USE current quote for the liked feature 
     console.log(randomIndex);
 
     const elem = document.getElementById('quote');
@@ -50,7 +53,7 @@ function getRandomQuote() {
     console.log(randomQuote);
 }
 setTimeout(getRandomQuote, 1000); // Initial call to display a quote after 1 second
-setInterval(getRandomQuote, 10000); // Hide the copy button initially
+setInterval(getRandomQuote, 15000); // Hide the copy button initially
 getRandomQuote(); // Initial call to display a quote on page load
 
 function copyText(){
@@ -60,7 +63,7 @@ function copyText(){
     // Check if clipboard API is available and in secure context (HTTPS)
     if (navigator.clipboard && window.isSecureContext) {
         navigator.clipboard.writeText(text).then(() => {
-            tooltip.innerHTML = "✅ Copied";
+            tooltip.innerHTML = "✅ Copied!";
             setTimeout(() => tooltip.innerHTML = "Copy to clipboard", 2000);
         }).catch(err => {
             alert("Error copying text: " + err);
@@ -97,4 +100,29 @@ const background = document.querySelector(".background-image");
 button_view.addEventListener("click", function() {
     background.classList.toggle("background-image2");
 
+});
+const like_button = document.getElementById("like-button");
+
+like_button.addEventListener("click", function () {
+
+
+    quotes_like.push({ //push current quote into a new array and use the object for Author and Quote 
+        quote: currentQuote.Quote,
+        author: currentQuote.Author
+    });
+    
+
+    const output = document.getElementById("like-text");
+    output.innerHTML = "";
+    quotes_like.forEach(function (item) { //for each quote - format it like this, loop through and format it with the item variable 
+        output.innerHTML += `
+            <div class="liked-quote">
+                <p>${item.quote}</p>
+                <p>- ${item.author}</p>
+                <hr>
+            </div>
+        `;
+    });
+
+    console.log(quotes_like);
 });

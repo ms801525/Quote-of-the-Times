@@ -37,6 +37,12 @@
             <h3>
                 Quotes of the times
             </h3>
+            <h3>
+                Created by Mustafa Ali 
+                <br>
+                <br>
+                Version1.2
+            </h3>
             <p class="p2">
                 Daily Inspiration
                 <br>
@@ -45,8 +51,9 @@
             </p>
         </div>
         <div class="center">
-        <button onclick="copyText()" onmouseout="outFunction()" id="copy-button" class="button1"><span id="tooltip">📋 Copy
+        <button onclick="copyText()" onmouseout="outFunction()" id="copy-button" class="copy-like-button"><span id="tooltip">📋 Copy
         </span></button>
+        <button class="copy-like-button" id="like-button">❤️ Like</button>
         </div>
         <div onload="getRandomeQuote()"  class="outdiv" id="quote"></div>
         <div class="socials">
@@ -56,10 +63,15 @@
         </div>
           
         <script src="myscript.js" type="module"></script>
+        <br>
+
+        <div class="like-box">
+            <p class="like-text" id="like-text">
+                
+            </p>
         </div>
-        <footer class="footer">
-            <p>Created by Mustafa Ali</p>
-            <p>VERSION 1.2</p>
-        </footer>
+    
+        </div>
+        
     </body>
 </html>
