@@ -16,12 +16,6 @@
     <body class="body">
 
         <div class="background-image">
-
-        <div class="div-loader">
-            <div class="loader">
-            </div>
-        </div>
-
         <!-- Nav bar -->
         <!-- <div class="nav-center">
             <a class="navbar" href="index.html"><u>Home</u></a>
@@ -48,18 +42,15 @@
                 <br>
                 Discover thousands of motivational, philosophical and famous quotes. Please use the view that is most comfortable for you 🙂
                 <br>
+                <button class="like-page-button"><a class="like-link" href="quotes.html">liked Quotes --></a></button>
             </p>
+            <p class="p-counter" id="p-counter"></p>
         </div>
         <div class="center">
         <button onclick="copyText()" onmouseout="outFunction()" id="copy-button" class="copy-like-button"><span id="tooltip">📋 Copy
         </span></button>
         <button class="copy-like-button" id="like-button">❤️ Like</button>
         <button class="next-quote" id="nextQuote">Show Next Quote</button>
-        
-        <div class="counter">
-            <p class="p-counter" id="p-counter"></p>
-        </div>
-        
         </div>
         <div onload="getRandomQuote()"  class="outdiv" id="quote">
         </div>
@@ -73,7 +64,7 @@
         <br>
 
         <div class="like-box" id="like-box">
-            <p class="like-text" id="like-text" aria-placeholder="plalce">
+            <p class="like-text" id="like-text" aria-placeholder="place">
             </p>
             <button class="remove-button" id="remove">Remove Last Quote</button>
         </div>

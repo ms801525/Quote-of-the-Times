@@ -19,6 +19,8 @@ const button = document.getElementById('quote-button');
 let quotes = [];
 let quotes_like = [];
 let currentQuote = null; //create a current quote
+let save_quote =
+    JSON.parse(localStorage.getItem("Saved Quotes")) || [];
 console.log('Fetching quotes from JSON file...');
 console.log("=== SCRIPT STARTED ===");
 console.log("Fetching quotes from JSON file...");
@@ -78,7 +80,7 @@ function getQuote() {
     console.log(randomQuote);
     counter = counter + 1;
     const count = document.getElementById('p-counter');
-    count.innerHTML = 'Quote ' + counter;
+    count.innerHTML = '<b>Quote --> <i>' + counter + '</i> <--</b>';
 
 }
 setTimeout(getQuote, 1000); // Hide the copy button initially
@@ -157,7 +159,23 @@ function getLike() {
     });
     console.log("# of liked Quotes");
     console.log(quotes_like.length);
+
+    //this is to save quote in locale storage
+     // Save quote to localStorage
+     save_quote.push({
+        quote: currentQuote.Quote,
+        author: currentQuote.Author
+    });
+
+    localStorage.setItem(
+        "Saved Quotes",
+        JSON.stringify(save_quote)
+    );
+
+    console.log("Saved Quotes:", save_quote);
+
 };
+
 //remove quote button 
 const removeButton = document.getElementById('remove');
 
