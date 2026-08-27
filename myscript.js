@@ -20,6 +20,8 @@ let quotes = [];
 let quotes_like = [];
 let currentQuote = null; //create a current quote
 console.log('Fetching quotes from JSON file...');
+console.log("=== SCRIPT STARTED ===");
+console.log("Fetching quotes from JSON file...");
 fetch('quotes.json')
     .then(response => {
         if (!response.ok) {
@@ -36,25 +38,45 @@ fetch('quotes.json')
         console.error('There was a problem with the fetch operation:', error);
         console.log('Error fetching quotes:', error);
     });
+
     
-function getRandomQuote() {
-    if(quotes.length === 0){
+// function getRandomQuote() {
+//     if(quotes.length === 0){
+//         console.log("Quote is Loading");
+//         return;
+//     }
+//     const randomIndex = Math.floor(Math.random() * quotes.length);
+//     const randomQuote = quotes[randomIndex];
+//     currentQuote = randomQuote; //whatever the random quote is, equal it to the current quote so we can USE current quote for the liked feature 
+//     console.log(randomIndex);
+
+//     const elem = document.getElementById('quote');
+//     elem.innerHTML = randomQuote.Quote + '<br><br> - ' + randomQuote.Author;
+//     // Call copyText to update the tooltip with the new quote
+//     console.log(randomQuote);
+// }
+// setTimeout(getRandomQuote, 1000); // Initial call to display a quote after 1 second
+// setInterval(getRandomQuote, 15000); // Hide the copy button initially
+// getRandomQuote(); // Initial call to display a quote on page load
+
+const nextButton = document.getElementById('nextQuote');
+
+nextButton.addEventListener('click', getQuote);
+
+function getQuote() {
+    if (quotes.length === 0) {
         console.log("Quote is Loading");
         return;
     }
     const randomIndex = Math.floor(Math.random() * quotes.length);
     const randomQuote = quotes[randomIndex];
     currentQuote = randomQuote; //whatever the random quote is, equal it to the current quote so we can USE current quote for the liked feature 
-    console.log(randomIndex);
-
     const elem = document.getElementById('quote');
     elem.innerHTML = randomQuote.Quote + '<br><br> - ' + randomQuote.Author;
     // Call copyText to update the tooltip with the new quote
     console.log(randomQuote);
 }
-setTimeout(getRandomQuote, 1000); // Initial call to display a quote after 1 second
-setInterval(getRandomQuote, 15000); // Hide the copy button initially
-getRandomQuote(); // Initial call to display a quote on page load
+setTimeout(getQuote, 1000); // Hide the copy button initially
 
 function copyText(){
     const text = document.getElementById('quote').innerText;
@@ -101,9 +123,13 @@ button_view.addEventListener("click", function() {
     background.classList.toggle("background-image2");
 
 });
+
 const like_button = document.getElementById("like-button");
 
-like_button.addEventListener("click", function () {
+like_button.addEventListener("click", getLike)
+
+function getLike() {
+    removeButton.style.display = "inline-block";
 
 
     quotes_like.push({ //push current quote into a new array and use the object for Author and Quote 
@@ -112,6 +138,34 @@ like_button.addEventListener("click", function () {
     });
     
 
+    const output = document.getElementById("like-text");
+    output.innerHTML = "";
+
+    quotes_like.forEach(function (item) { //for each quote - format it like this, loop through and format it with the item variable 
+        output.innerHTML += `
+            <div class="liked-quote">
+                <p>${item.quote}</p>
+                <p>- ${item.author}</p>
+                <hr>
+            </div>
+        `;
+    });
+    console.log("# of liked Quotes");
+    console.log(quotes_like.length);
+};
+//remove quote button 
+const removeButton = document.getElementById('remove');
+
+removeButton.addEventListener('click', removeQuote);
+
+function removeQuote() {
+    quotes_like.pop()
+    if (quotes_like.length === 0) {
+        removeButton.style.display = "none";
+    } else {
+        removeButton.style.display = "inline-block";
+    }
+    console.log(quotes_like.length)
     const output = document.getElementById("like-text");
     output.innerHTML = "";
     quotes_like.forEach(function (item) { //for each quote - format it like this, loop through and format it with the item variable 
@@ -123,6 +177,4 @@ like_button.addEventListener("click", function () {
             </div>
         `;
     });
-
-    console.log(quotes_like);
-});
+}

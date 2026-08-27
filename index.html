@@ -41,7 +41,7 @@
                 Created by Mustafa Ali 
                 <br>
                 <br>
-                Version1.2
+                Version 2
             </h3>
             <p class="p2">
                 Daily Inspiration
@@ -54,8 +54,9 @@
         <button onclick="copyText()" onmouseout="outFunction()" id="copy-button" class="copy-like-button"><span id="tooltip">📋 Copy
         </span></button>
         <button class="copy-like-button" id="like-button">❤️ Like</button>
+        <button class="next-quote" id="nextQuote">Show Next Quote</button>
         </div>
-        <div onload="getRandomeQuote()"  class="outdiv" id="quote"></div>
+        <div onload="getRandomQuote()"  class="outdiv" id="quote"></div>
         <div class="socials">
             <a href="https://www.linkedin.com/in/mustafa-ali-8b03a3181/" class="fa fa-linkedin"></a>
             <a href="https://github.com/ms801525" class="fa fa-github"></a>
@@ -65,10 +66,10 @@
         <script src="myscript.js" type="module"></script>
         <br>
 
-        <div class="like-box">
-            <p class="like-text" id="like-text">
-                
+        <div class="like-box" id="like-box">
+            <p class="like-text" id="like-text" aria-placeholder="plalce">
             </p>
+            <button class="remove-button" id="remove">Remove Last Quote</button>
         </div>
     
         </div>

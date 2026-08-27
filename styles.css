@@ -19,6 +19,8 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    background-attachment: fixed;
 }
 .background-image2{
     background-image: url("Nature-image.jpg");
@@ -32,14 +34,14 @@ body {
     border-color: white;
     margin: 5px;
 }
-.loader {
+/* .loader {
     width: 120px;
     height: 120px;
     border: 8px solid black;
     border-top-color: grey;
     position: relative;
     border-radius: 50%;
-    animation: spin 1s linear infinite, slide 2.0s forwards;
+    animation: spin 1s linear infinite, slide 1.0s forwards;
 }
 @keyframes spin {
     to { transform: rotate(360deg); }
@@ -56,7 +58,7 @@ body {
         transform: rotate(360deg);
         pointer-events: none;
     }
-}
+} */
 
 .div-loader{
     position: fixed;
@@ -228,6 +230,37 @@ h5{
     overflow: auto;
     overflow-wrap: break-word;
     max-height: 300px;
+}
+.next-quote{
+    text-align: center;
+    margin: 20px;
+    padding: 10px 5px;
+    background-color: #0a0909;
+    color: #f4f0f0;
+    opacity: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 50%;
+    min-width: 150px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+.remove-button{
+    text-align: center;
+    margin: 20px;
+    padding: 10px 5px;
+    background-color: #0a0909;
+    color: #f4f0f0;
+    opacity: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 50%;
+    min-width: 150px;
+    cursor: pointer;
+    border: 2px solid white;
+    display: none;
 }
 .link{
     text-align: center;
