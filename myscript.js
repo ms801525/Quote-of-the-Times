@@ -60,6 +60,7 @@ fetch('quotes.json')
 // getRandomQuote(); // Initial call to display a quote on page load
 
 const nextButton = document.getElementById('nextQuote');
+var counter = 0;
 
 nextButton.addEventListener('click', getQuote);
 
@@ -75,6 +76,10 @@ function getQuote() {
     elem.innerHTML = randomQuote.Quote + '<br><br> - ' + randomQuote.Author;
     // Call copyText to update the tooltip with the new quote
     console.log(randomQuote);
+    counter = counter + 1;
+    const count = document.getElementById('p-counter');
+    count.innerHTML = 'Quote ' + counter;
+
 }
 setTimeout(getQuote, 1000); // Hide the copy button initially
 
